@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablo Gösterme ve Arama</title>
+    <style>
+        #tableContainer {
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Sign Up</h1>
+    <form action="/submit" method="post">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="E-mail">E-mail Address</label>
+        <input type="email" id="E-mail" name="E-mail" required>
+        <br>
+        <label for="message">Your message</label>
+        <textarea name="message" id="message"></textarea>
+        <br>
+        <button type="submit">Send</button>
+    </form>
+
+    <input type="text" id="searchInput" placeholder="Arama yapın...">
+    <button onclick="performSearch()">Ara</button>
+    <button onclick="toggleTable()">Tablo Göster</button>
+
+    <div id="output" data-user-id="123" data-role="Admin"></div>
+    <div id="tableContainer" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
